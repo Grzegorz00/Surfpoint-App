@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <title>SurfPoint Demo</title>
+</head>
+<body>
+     <header>
+        <h1>SurfPoint</h1>
+        <img src="../../images/biale_logo_surf.png" alt="SurfPoint Logo">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Strona główna</a></li>
+            <li><a href="../../pages/instructor/list.html" class="active">Instruktorzy</a></li>
+            <li><a href="../../pages/course/list.html">Kursy</a></li>
+            <li><a href="../../pages/client/list.html">Dla Klienta</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Nowy instruktor</h2>
+        <form class="form" novalidate>
+            <div class="input-group">
+                <label for="name">Imię: *</label>
+                <input type="text" name="name" id="name" required>
+                <span id="errorName"  class="errors-text">Pole jest wymagane</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="surname">Nazwisko: *</label>
+                <input type="text" name="surname" id="surname" required>
+                <span id="errorSurname" class="errors-text">Pole jest wymagane</span>
+            </div>
+          
+            <div class="input-group">
+                <label for="sport">Sport: *</label>
+                <input type="text" name="sport" id="sport" required>
+                <span id="errorSport" class="errors-text">Pole jest wymagane</span>
+            </div>
+       
+            <div class="input-group">
+                <label for="price">Cena: *</label>
+                <input type="text" name="price" id="price" required>
+                <span id="errorPrice" class="errors-text">Pole jest wymagane</span>
+            </div>
+
+            <div class="form-buttons">
+                <input type="submit" value="Dodaj" class="form-button-submit">
+                <a href="../../pages/instructor/list.html" class="form-button-cancel">Anuluj</a>
+            </div>
+        </form>
+    </main>
+    <footer>
+        Grzegorz Swiecicki s20978
+    </footer>
+</body>
+<script type="application/javascript" src="../../js/validationCommon.js"></script> 
+<script type="application/javascript" src="../../js/validationInstrForm.js"></script> 
+</html>

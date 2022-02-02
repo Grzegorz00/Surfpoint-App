@@ -1,0 +1,56 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2>Szcegóły kursu</h2>
+    <form class="form">
+        <input type="text" name="name" id="name" value="Pudzianowski" disabled />
+        <label for="name">Nazwisko trenera: *</label>
+        <span id="errorName"></span>
+
+        <input type="text" name="surname" id="surname"  value="Janowski" disabled />
+        <label for="name">Nazwisko klienta: *</label>
+        <span id="errorSurname"></span>
+
+        <input type="date" name="sport" id="sport"  value="2021-12-20"  disabled />
+        <label for="name">Data od: *</label>
+        <span id="errorSport"></span>
+
+        <input type="date" name="price" id="price"  value="2021-12-25"   disabled />
+        <label for="name">Data do: *</label>
+        <span id="errorPrice"></span>
+
+        <div>
+            <a href="/course/edit/1" class="list-actions-button-edit">Edytuj</a>
+        </div>
+    </form>
+    <h2></h2>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+                <th>Data rozpoczecia</th>
+                <th>Data zakonczenia</th>
+                <th>Liczba zajec</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mariusz</td>
+                <td>Pudzianowski</td>
+                <td>01.09.2021</td>
+                <td>08.09.2021</td>
+                <td>7</td> 
+            </tr>
+            <tr>
+                <td>Adam</td>
+                <td>Malysz</td>
+                <td>01.08.2021</td>
+                <td>08.08.2021</td>
+                <td>7</td> 
+            </tr>
+        </tbody>
+    </table>
+    </br>
+    <a href="/course" class="button-add">Powrot</a>
+</main>
+<%- include('../../fragments/footer.ejs') %>

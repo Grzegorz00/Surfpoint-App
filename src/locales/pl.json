@@ -1,0 +1,175 @@
+{
+	"main-page": {
+		"content": "Strona główna"
+	},
+	"nav": {
+		"main-page": "Strona główna",
+		"instructors": "Instruktorzy",
+		"courses": "Kursy",
+		"clients": "Klienci"
+	},
+    "list": {
+       "actions": {
+          "title": "Akcje",
+          "details": "Szczegóły",
+          "edit": "Edytuj",
+          "delete": "Usuń"
+       }
+    },
+   "form": {
+      "actions": {
+         "return": "Powrót",
+         "edit": "Edytuj",
+         "cancel": "Anuluj",
+		 "login": "Zaloguj"
+      }
+   },
+   "error": {
+	   "error": "Błąd",
+	   "formHasErrors" : "Formularz zawiera błędy"
+   },
+	"instructor": {
+		"fields": {
+			"name": "Imię",
+			"surname": "Nazwisko",
+			"email": "Email",
+			"password": "Hasło",
+			"sport": "Sport",
+			"price": "Cena"
+		},
+		"list": {
+			"title": "Instruktorzy",
+			"addNew": "Dodaj nowego instruktora",
+			"noData": "Brak instruktorów w bazie",
+			"pageTitle": "Lista instruktorów",
+			"loadingText": "Ładowanie danych instruktora...",
+			"details": "Szczegóły instruktora"
+		},
+		"form": {
+			"characters": "znaków",
+			"add": {
+				"pageTitle": "Nowy instruktor",
+				"btnLabel": "Dodaj instruktora",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie dodano instruktora"
+				}
+			},
+			"edit": {
+				"pageTitle": "Edycja instruktora",
+				"btnLabel": "Zapisz zmiany",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie zaktualizowano instruktora"
+				}
+			}
+		},
+		"details": {
+			"courses": {
+				"tableTitle": "Kursy",
+				"clientName": "Imię Klienta",
+				"clientSurname": "Nazwisko Klienta",
+				"dateFrom": "Data rozpoczęcia",
+				"dateTo": "Data zakończenia"
+			}
+		}
+	},
+	"client": {
+		"fields": {
+			"name": "Imię",
+			"surname": "Nazwisko",
+			"age": "Wiek",
+			"phoneNumber": "Numer telefonu"
+		},
+		"list": {
+			"title": "Klienci",
+			"addNew": "Dodaj nowego klienta",
+			"noData": "Brak klientów w bazie",
+			"pageTitle": "Lista klientów",
+			"loadingText": "Ładowanie danych klienta...",
+			"details": "Szczegóły klienta"
+		},
+		"form": {
+			"characters": "znaków",
+			"add": {
+				"pageTitle": "Nowy klient",
+				"btnLabel": "Dodaj klienta",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie dodano klienta"
+				}
+			},
+			"edit": {
+				"pageTitle": "Edycja klienta",
+				"btnLabel": "Zapisz zmiany",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie zaktualizowano klienta"
+				}
+			}
+		},
+		"details": {
+			"courses": {
+				"tableTitle": "Kursy",
+				"clientName": "Imię Klienta",
+				"clientSurname": "Nazwisko Klienta",
+				"dateFrom": "Data rozpoczęcia",
+				"dateTo": "Data zakończenia"
+			}
+		}
+	},
+	"course": {
+		"fields": {
+			"preSelectedTextInstr": "--- Wybierz instruktora ---",
+			"preSelectedTextKlient": "--- Wybierz klienta ---",
+			"instructor": "Nazwisko instruktora",
+			"client": "Nazwisko Klienta",
+			"dateFrom": "Data od",
+			"dateTo": "Data do"
+		},
+		"list": {
+			"title": "Kursy",
+			"addNew": "Dodaj nowy kurs",
+			"noData": "Brak kursów w bazie",
+			"pageTitle": "Lista kursów",
+			"loadingText": "Ładowanie danych kursów...",
+			"details": "Szczegóły kursu"
+		},
+		"form": {
+			"characters": "znaków",
+			"add": {
+				"pageTitle": "Nowy kurs",
+				"btnLabel": "Dodaj kurs",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie dodano kurs"
+				}
+			},
+			"edit": {
+				"pageTitle": "Edycja kursu",
+				"btnLabel": "Zapisz zmiany",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie zaktualizowano kurs"
+				}
+			}
+		}
+	},
+	"validation": {
+		"messages": {
+			"notEmpty": "Pole jest wymagane",
+			"len_2_100": "Pole powimno zawierać od 2 do 100 znaków",
+			"len_5_50": "Pole powimno zawierać od 5 do 50 znaków",
+			"isEmail": "Pole powinno zawierać prawidłowy adres email",
+			"isDecimal": "Pole powinno być liczbą",
+			"formErrors": "Formularz zawiera błędy",
+			"containsNine": "Pole powimno zawierać 9 znaków",
+			"isDate": "Zły format daty"
+		}
+	},
+	"auth": {
+		"pageTitle": "Logowanie",
+		"login": "Zaloguj",
+		"logout": "Wyloguj"
+	}
+}

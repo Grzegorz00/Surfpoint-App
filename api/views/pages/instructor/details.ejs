@@ -1,0 +1,56 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2>Szcegóły instruktora</h2>
+    <form class="form">
+        <input type="text" name="name" id="name" value="Jan" disabled />
+        <label for="name">Imię: *</label>
+        <span id="errorName"></span>
+
+        <input type="text" name="surname" id="surname"  value="Kowalski" disabled />
+        <label for="name">Nazwisko: *</label>
+        <span id="errorSurname"></span>
+
+        <input type="text" name="sport" id="sport"  value="Windsurfing" disabled />
+        <label for="name">Sport: *</label>
+        <span id="errorSport"></span>
+
+        <input type="text" name="price" id="price"  value="50 zł"  disabled />
+        <label for="name">Cena: *</label>
+        <span id="errorPrice"></span>
+
+        <div>
+            <a href="/instructor/edit/1" class="list-actions-button-edit">Edytuj</a>
+        </div>
+    </form>
+    <h2></h2>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+                <th>Data rozpoczecia</th>
+                <th>Data zakonczenia</th>
+                <th>Liczba zajec</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Grzegorz</td>
+                <td>Swiecicki</td>
+                <td>01.09.2021</td>
+                <td>08.09.2021</td>
+                <td>7</td> 
+            </tr>
+            <tr>
+                <td>Adam</td>
+                <td>Malysz</td>
+                <td>01.08.2021</td>
+                <td>08.08.2021</td>
+                <td>7</td> 
+            </tr>
+        </tbody>
+    </table>
+    </br>
+    <a href="/instructor" class="button-add">Powrot</a>
+</main>
+<%- include('../../fragments/footer.ejs') %>

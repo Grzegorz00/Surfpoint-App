@@ -1,0 +1,66 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate>
+        <input type="hidden" name="id" value="<%= Client.id %>">
+
+        <label for="name">Imię: <span class="symbol-required">*</span></label>
+        <input type="text" name="name" id="name" placeholder="1-100 znaków" required />
+        <span id="errorName" class="errors-text"></span>
+
+        <label for="name">Nazwisko: <span class="symbol-required">*</span></label>
+        <input type="text" name="surname" id="surname" placeholder="1-100 znaków" required />
+        <span id="errorSurname" class="errors-text"></span>
+
+        <label for="name">Wiek: <span class="symbol-required">*</span></label>
+        <input type="text" name="age" id="age" placeholder="np. 23" required />
+        <span id="errorAge" class="errors-text"></span>
+
+        <label for="name">Numer telefonu: <span class="symbol-required">*</span></label>
+        <input type="text" name="phoneNumber" id="number" placeholder="np. 222333444" required />
+        <span id="errorPhoneNumber" class="errors-text"></span>
+        
+        <% if(formMode =='showDetails') { %>
+            <div class="section-buttons">
+                <a href="/client/edit/<%= Client.id %>" class="list-actions-button-edit">Edytuj</a>
+            </div>
+        <% } %>
+
+        <% if(formMode =='showDetails') { %>
+            <br>
+            <h2>Kursy</h2>
+            <table class="table-list">
+                <thead>
+                    <tr>
+                        <th>Imie</th>
+                        <th>Nazwisko</th>
+                        <th>Data rozpoczecia</th>
+                        <th>Data zakonczenia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% console.log(Client.courses); for(let c of Client.courses) {%>
+                    <tr>
+                        <td><a href="/course/details/<%= c.instructor.id %>"><%= c.instructor.name %></td>
+                        <td><a href="/course/details/<%= c.instructor.id %>"><%= c.instructor.surname %></td>
+                        <td><%= c.dateFrom.toISOString().split('T')[0] %></td>
+                        <td><%= c.dateTo ? c.dateTo.toISOString().split('T')[0] : '' %></td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        <% } %>
+
+        <div class="form-buttons">
+            <p id="errorSumary" class="errors-text"></p>
+            <% if(formMode != 'showDetails') { %>
+                <input type="submit" value="<%= btnLabel %>" class="form-button-submit">
+                <a href="/client" class="form-button-cancel">Anuluj</a>
+            <% } else { %>
+                <a href="/client" class="button-add">Powrot</a>
+            <% } %>
+        </div>
+    </form>
+</main>
+<script type="application/javascript" src="../../js/validationClientForm.js"></script>
+<%- include('../../fragments/footer.ejs') %>

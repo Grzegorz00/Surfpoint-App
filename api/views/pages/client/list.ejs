@@ -1,0 +1,40 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2>Lista Klientow</h2>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+                <th>Wiek</th>
+                <th>Numer Telefonu</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let client of clients) { %>
+            <tr>
+                <td><%= client.name %></td>
+                <td><%= client.surname %></td>
+                <td><%= client.age %></td>
+                <td><%= client.phoneNumber %></td>
+                <td>
+                    <ul class="list-actions">
+                        <li>
+                            <a href="/client/details/<%= client.id %>" class="list-actions-button-details">Szczegóły</a>
+                        </li>
+                        <li>
+                            <a href="/client/edit/<%= client.id %>" class="list-actions-button-edit">Edytuj</a>
+                        </li>
+                        <li>
+                            <a href="/client/delete/<%= client.id %>" class="list-actions-button-delete">Usuń</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <p><a href="/client/add" class="button-add">Dodaj nowego klienta</a></p>
+</main>
+<%- include('../../fragments/footer.ejs') %>

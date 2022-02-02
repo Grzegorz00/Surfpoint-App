@@ -1,0 +1,40 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2>Lista Kursów</h2>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Nazwisko Trenera</th>
+                <th>Nazwisko Klienta</th>
+                <th>Data od</th>
+                <th>Data do</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let course of courses) { %>
+            <tr>
+                <td><%= course.instructor.surname %></td>
+                <td><%= course.client.surname %></td>
+                <td><%= course.dateFrom.toISOString().split('T')[0] %></td>
+                <td><%= course.dateTo.toISOString().split('T')[0] %></td>
+                <td>
+                    <ul class="list-actions">
+                        <li>
+                            <a href="/course/details/<%= course.id %>" class="list-actions-button-details">Szczegóły</a>
+                        </li>
+                        <li>
+                            <a href="/course/edit/<%= course.id %>" class="list-actions-button-edit">Edytuj</a>
+                        </li>
+                        <li>
+                            <a href="/course/delete/<%= course.id %>" class="list-actions-button-delete">Usuń</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <p><a href="/course/add" class="button-add">Dodaj nowy kurs</a></p>
+</main>
+<%- include('../../fragments/footer.ejs') %>

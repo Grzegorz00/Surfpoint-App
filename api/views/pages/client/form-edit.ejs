@@ -1,0 +1,28 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2>Edycja klienta</h2>
+    <form class="form" novalidate>
+        <label for="name">Imię: <span class="symbol-required">*</span></label>
+        <input type="text" name="name" id="name" placeholder="1-100 znaków" value="Jan" required />
+        <span id="errorName" class="errors-text"></span>
+
+        <label for="name">Nazwisko: <span class="symbol-required">*</span></label>
+        <input type="text" name="surname" id="surname" placeholder="1-100 znaków" value="Janowski" required />
+        <span id="errorSurname" class="errors-text"></span>
+
+        <label for="name">Wiek: <span class="symbol-required">*</span></label>
+        <input type="text" name="age" id="age" placeholder="np. 23" value="18" required />
+        <span id="errorAge" class="errors-text"></span>
+
+        <label for="name">Numer telefonu: <span class="symbol-required">*</span></label>
+        <input type="text" name="phone_number" id="number" placeholder="np. 222333444" value="111333222" required />
+        <span id="errorPhoneNumber" class="errors-text"></span>
+        
+        <div class="form-buttons">
+            <input type="submit" value="Dodaj" class="form-button-submit">
+            <a href="/client" class="form-button-cancel">Anuluj</a>
+        </div>
+    </form>
+</main>
+<script type="application/javascript" src="../../js/validationClientForm.js"></script>
+<%- include('../../fragments/footer.ejs') %>

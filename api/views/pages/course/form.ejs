@@ -1,0 +1,56 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate>
+        <input type="hidden" name="id" value="<%= course.id %>">
+
+        <label for="name">Nazwisko instruktora: <span class="symbol-required">*</span></label>
+        <select name="instructor_id" id="instructor" required <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
+            <option value="" selected>--- Wybierz instruktora ---</option>
+            <% for (let i=0; i < allInstructors.length; i++) { let instructor = allInstructors[i]; %>
+                <option value="<%= instructor.id%>" label="<%= instructor.name + ' ' + instructor.surname %>"
+                    <%= (course.id && instructor.id.toString() == course.instructor.id.toString()) ? 'selected' : '' %>>
+                </option>
+            <% } %>
+        </select>
+        <span id="errorClientName" class="errors-text"></span>
+
+        <label for="name">Nazwisko Klienta: <span class="symbol-required">*</span></label>
+        <select name="client_id" id="client" required <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
+            <option value="" selected>--- Wybierz klienta ---</option>
+            <% for (let i=0; i < allClients.length; i++) { let client = allClients[i]; %>
+                <option value="<%= client.id %>" label="<%= client.name + ' ' + client.surname %>"
+                    <%= (course.id && client.id.toString() == course.client.id.toString()) ? 'selected' : '' %>>
+                </option>
+            <% } %>
+        </select>
+        <span id="errorClientSurname" class="errors-text"></span>
+
+        <label for="name">Data od: <span class="symbol-required">*</span></label>
+        <input type="date" name="dateFrom" id="dateFrom" value="<%= (typeof course.dateFrom !== 'undefined') ? course.dateFrom.toISOString().split('T')[0] : '' %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> required />
+        <span id="errorDateFrom" class="errors-text"></span>
+
+        <label for="name">Data do:</label>
+        <input type="date" name="dateTo" id="dateTo" value="<%= (typeof course.dateTo !== 'undefined') ? course.dateTo.toISOString().split('T')[0] : '' %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> required />
+        <span id="errorDateTo" class="errors-text"></span>
+
+    <% if(formMode =='showDetails') { %>
+        <div class="section-buttons">
+            <a href="/course/edit/<%= course.id %>" class="list-actions-button-edit">Edytuj</a>
+        </div>
+    <% } %>
+
+    <div class="form-buttons">
+        <p id="errorSumary" class="errors-text"></p>
+        <% if(formMode != 'showDetails') { %>
+            <input type="submit" value="<%= btnLabel %>" class="form-button-submit">
+            <a href="/course" class="form-button-cancel">Anuluj</a>
+        <% } else { %>
+            <a href="/course" class="button-add">Powrot</a>
+        <% } %>
+    </div>
+</form>
+
+</main>
+<script type="application/javascript" src="../../js/validationCourseForm.js"></script>
+<%- include('../../fragments/footer.ejs') %>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script type="application/javascript" src="../../js/validationCommon.js"></script> 
+    <title>SurfPoint Demo</title>
+</head>
+<body>
+    <header>
+        <h1>SurfPoint</h1>
+        <img src="../../images/biale_logo_surf.png" alt="SurfPoint Logo">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Strona główna</a></li>
+            <li><a href="../../pages/instructor/list.html">Instruktorzy</a></li>
+            <li><a href="../../pages/course/list.html" class="active">Kursy</a></li>
+            <li><a href="../../pages/client/list.html">Dla Klienta</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Nowy kurs</h2>
+        <form class="form">
+            <label for="name">Nazwisko trenera: *</label>
+            <input type="text" name="name" id="name" required>
+            <span id="errorName"  class="errors-text">Pole jest wymagane</span>
+
+            <label for="name">Nazwisko klienta: *</label>
+            <input type="text" name="surname" id="surname" required>
+            <span id="errorSurname" class="errors-text">Pole jest wymagane</span>
+
+            <label for="name">Data od: *</label>
+            <input type="text" name="sport" id="sport" required>
+            <span id="errorSport" class="errors-text">Pole jest wymagane</span>
+
+            <label for="name">Data do: *</label>
+            <input type="text" name="price" id="price" required>
+            <span id="errorPrice" class="errors-text">Pole jest wymagane</span>
+
+            <div class="form-buttons">
+                <input type="submit" value="Dodaj" class="form-button-submit">
+                <a href="/course" class="form-button-cancel">Anuluj</a>
+            </div>
+        </form>
+    </main>
+    <footer>
+        Grzegorz Swiecicki s20978
+    </footer>
+</body>
+</html>

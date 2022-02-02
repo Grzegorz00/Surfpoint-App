@@ -1,0 +1,40 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2>Lista Instruktorów</h2>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+                <th>Sport</th>
+                <th>Cena</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let instructor of instructors) { %>
+            <tr>
+                <td><%= instructor.name %></td>
+                <td><%= instructor.surname %></td>
+                <td><%= instructor.sport %></td>
+                <td><%= instructor.price %></td>
+                <td>
+                    <ul class="list-actions">
+                        <li>
+                            <a href="/instructor/details/<%= instructor.id %>" class="list-actions-button-details">Szczegóły</a>
+                        </li>
+                        <li>
+                            <a href="/instructor/edit/<%= instructor.id %>" class="list-actions-button-edit">Edytuj</a>
+                        </li>
+                        <li>
+                            <a href="/instructor/delete/<%= instructor.id %>" class="list-actions-button-delete">Usuń</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <p><a href="/instructor/add" class="button-add">Dodaj nowego instruktora</a></p>
+</main>
+<%- include('../../fragments/footer.ejs') %>

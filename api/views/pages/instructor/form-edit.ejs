@@ -1,0 +1,28 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2>Edycja instruktora</h2>
+    <form class="form" novalidate>
+        <label for="name">Imię: <span class="symbol-required">*</span></label>
+        <input type="text" name="name" id="name" placeholder="1-100 znaków" value="Adam" required />
+        <span id="errorName" class="errors-text"></span>
+
+        <label for="name">Nazwisko: <span class="symbol-required">*</span></label>
+        <input type="text" name="surname" id="surname" placeholder="1-100 znaków" value="Małysz" required />
+        <span id="errorSurname" class="errors-text"></span>
+
+        <label for="name">Sport: <span class="symbol-required">*</span></label>
+        <input type="text" name="sport" id="sport" placeholder="1-100 znaków" value="Kitesurfing" required />
+        <span id="errorSport" class="errors-text"></span>
+
+        <label for="name">Cena: <span class="symbol-required">*</span></label>
+        <input type="text" name="price" id="price" placeholder="np. 100" value="80" required />
+        <span id="errorPrice" class="errors-text"></span>
+        
+        <div class="form-buttons">
+            <input type="submit" value="Dodaj" class="form-button-submit">
+            <a href="/instructor" class="form-button-cancel">Anuluj</a>
+        </div>
+    </form>
+</main>
+<script type="application/javascript" src="../../js/validationInstrForm.js"></script>
+<%- include('../../fragments/footer.ejs') %>

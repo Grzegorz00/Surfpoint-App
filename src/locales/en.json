@@ -1,0 +1,175 @@
+{
+	"main-page": {
+		"content": "Main Page"
+	},
+	"nav": {
+		"main-page": "Main Page",
+		"instructors": "Instructors",
+		"courses": "Courses",
+		"clients": "Clients"
+	},
+    "list": {
+        "actions": {
+          "title": "Actions",
+          "details": "Details",
+          "edit": "Edit",
+          "delete": "Delete"
+        }
+     },
+     "form": {
+        "actions": {
+           "return": "Return",
+           "edit": "Edit",
+           "cancel": "Cancel",
+		   "login": "Log in"
+       }
+   },
+   "error": {
+		"error": "Error",
+		"formHasErrors" : "Form has errors"
+	},
+	"instructor": {
+		"fields": {
+			"name": "Name",
+			"surname": "Surname",
+			"email": "Email",
+			"password": "Password",
+			"sport": "Sport",
+			"price": "Price"
+		},
+		"list": {
+			"title": "Instructors",
+			"addNew": "Add new instructor",
+			"noData": "No instructors in database",
+			"pageTitle": "List of instructors",
+			"loadingText": "Instructor data is loading...",
+			"details": "Instructor details"
+		},
+		"form": {
+			"characters": "characters",
+			"add": {
+				"pageTitle": "New instructor",
+				"btnLabel": "Add new instructor",
+				"confirm": {
+					"header": "Confirmation",
+					"text": "New instructor has been successfully created"
+				}
+			},
+			"edit": {
+				"pageTitle": "Editing an instructor",
+				"btnLabel": "Save changes",
+				"confirm": {
+					"header": "Confirmation",
+					"text": "The instructor has been successfully updated"
+				}
+			}
+		},
+		"details": {
+			"courses": {
+				"tableTitle": "Courses",
+				"clientName": "Clients Name",
+				"clientSurname": "Clients Surame",
+				"dateFrom": "Fate from",
+				"dateTo": "Date to"
+			}
+		}
+	},
+	"client": {
+		"fields": {
+			"name": "Name",
+			"surname": "Surname",
+			"age": "Age",
+			"phoneNumber": "Phone number"
+		},
+		"list": {
+			"title": "Clients",
+			"addNew": "Add new client",
+			"noData": "No clients in database",
+			"pageTitle": "List of clients",
+			"loadingText": "Instructor data is loading...",
+			"details": "Instructor details"
+		},
+		"form": {
+			"characters": "characters",
+			"add": {
+				"pageTitle": "New client",
+				"btnLabel": "Add new client",
+				"confirm": {
+					"header": "Confirmation",
+					"text": "New client has been successfully created"
+				}
+			},
+			"edit": {
+				"pageTitle": "Editing an client",
+				"btnLabel": "Save changes",
+				"confirm": {
+					"header": "Confirmation",
+					"text": "The client has been successfully updated"
+				}
+			}
+		},
+		"details": {
+			"courses": {
+				"tableTitle": "Courses",
+				"clientName": "Clients Name",
+				"clientSurname": "Clients Surame",
+				"dateFrom": "Fate from",
+				"dateTo": "Date to"
+			}
+		}
+	},
+	"course": {
+		"fields": {
+			"preSelectedTextInstr": "--- Choose an instructor ---",
+			"preSelectedTextKlient": "--- Choose a client ---",
+			"instructor": "Instructor's surname",
+			"client": "Client's surname",
+			"dateFrom": "Date from",
+			"dateTo": "Date to"
+		},
+		"list": {
+			"title": "Courses",
+			"addNew": "Add new course",
+			"noData": "No courses in database",
+			"pageTitle": "List of courses",
+			"loadingText": "Courses data is loading...",
+			"details": "Course details"
+		},
+		"form": {
+			"characters": "characters",
+			"add": {
+				"pageTitle": "New course",
+				"btnLabel": "Add new course",
+				"confirm": {
+					"header": "Confirmation",
+					"text": "New course has been successfully created"
+				}
+			},
+			"edit": {
+				"pageTitle": "Editing an course",
+				"btnLabel": "Save changes",
+				"confirm": {
+					"header": "Confirmation",
+					"text": "The course has been successfully updated"
+				}
+			}
+		}
+	},
+	"validation": {
+		"messages": {
+			"notEmpty": "The field is required",
+			"len_2_100": "The field should contain from 2 to 100 characters",
+			"len_5_50": "The field should contain from 5 to 50 characters",
+			"isEmail": "The field should contain a valid email address",
+			"isDecimal": "The field should be an number",
+			"formErrors": "The form contains errors",
+			"containsNine": "The field should contain 9 characters",
+			"isDate": "Bad date format"
+		}
+	},
+	"auth": {
+		"pageTitle": "Log in",
+		"login": "Log in",
+		"logout": "Log out"
+	}
+}
